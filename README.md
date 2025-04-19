@@ -13,7 +13,7 @@ Este sistema está compuesto por 4 proyectos integrados:
 
 ## Instalación y ejecución:
 ```bash
-
+cd FrontAngular/front-ordenes-compra
 npm install
 ng serve
 ```
