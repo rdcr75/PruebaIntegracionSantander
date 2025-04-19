@@ -98,8 +98,8 @@ Debe exponerse en: http://localhost:8001
 
 # Pruebas de Backend
 
-Usar la colección de postman ubicada en el directorio raís del proyecto:
-	[path donde se clonó el repositorio]\PruebaIntegracion\ProyectoIntegracion.postman_collection.json
+Usar la colección de postman ubicada en el directorio raís del proyecto, en el siguiente link:
+https://github.com/rdcr75/PruebaIntegracionSantander/blob/master/ProyectoIntegracion.postman_collection.json
 
 # Autor
 Desarrollado por Ruben Cabrera.
