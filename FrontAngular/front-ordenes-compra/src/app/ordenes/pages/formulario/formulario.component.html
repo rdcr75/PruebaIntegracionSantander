@@ -1,0 +1,38 @@
+<h2>Formulario de Orden de Compra</h2>
+<form [formGroup]="formulario">
+    <div>
+        <label>Cliente:</label>
+        <input formControlName="cliente" type="text" />
+        <div *ngIf="formulario.get('cliente')?.touched && formulario.get('cliente')?.invalid" style="color: red;">
+            El cliente es obligatorio.
+        </div>
+    </div>
+    <div>
+        <label>Producto:</label>
+        <select formControlName="producto" (change)="actualizarPrecioYTotal()">
+            <option *ngFor="let producto of productos" [value]="producto.nombre">
+                {{ producto.nombre }}
+            </option>
+        </select>
+        <div *ngIf="formulario.get('producto')?.touched && formulario.get('producto')?.invalid" style="color: red;">
+            El producto es obligatorio.
+        </div>
+    </div>
+    <div>
+        <label>Precio:</label>
+        <input [value]="precioSeleccionado" readonly />
+    </div>
+    <div>
+        <label>Cantidad:</label>
+        <input formControlName="cantidad" type="number" min="1" (input)="actualizarTotal()" />
+        <div *ngIf="formulario.get('cantidad')?.touched && formulario.get('cantidad')?.invalid" style="color: red;">
+            Ingrese una cantidad válida (mayor a 0).
+        </div>
+    </div>
+    <div>
+        <label>Total:</label>
+        <input [value]="total" readonly />
+    </div>
+
+    <button type="submit">Guardar</button>
+</form>

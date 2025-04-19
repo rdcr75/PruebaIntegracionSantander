@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CamelApplication<camel-integration>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ruben.camel.CamelApplication",
+            "projectName": "camel-integration",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CamelApplication<camel-integration>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ruben.camel.CamelApplication",
+            "projectName": "camel-integration",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

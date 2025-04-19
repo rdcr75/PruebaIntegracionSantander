@@ -1,0 +1,22 @@
+<h2>Órdenes de Compra</h2>
+<a routerLink="/ordenes/nuevo">Nueva Orden</a>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Proveedor</th>
+        <th>Fecha</th>
+        <th>Total</th>
+        <th>Estado</th>
+        <th>Acciones</th>
+    </tr>
+    <tr *ngFor="let orden of ordenes">
+        <td>{{ orden.id }}</td>
+        <td>{{ orden.proveedor }}</td>
+        <td>{{ orden.fecha }}</td>
+        <td>{{ orden.total | currency }}</td>
+        <td>{{ orden.estado }}</td>
+        <td>
+            <a [routerLink]="['/ordenes/editar', orden.id]">Editar</a>
+        </td>
+    </tr>
+</table>

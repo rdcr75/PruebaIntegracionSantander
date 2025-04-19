@@ -1,0 +1,30 @@
+[
+  {
+    "Cliente": "Maria Peres",
+    "Productos": [
+      {
+        "Nombre": "Mouse",
+        "Cantidad": 5
+      },
+      {
+        "Nombre": "Teclado",
+        "Cantidad": 15
+      }
+    ],
+    "Fecha": "2025-04-17T00:00:00"
+  },
+  {
+    "Cliente": "ppp",
+    "Productos": [
+      {
+        "Nombre": "aaa",
+        "Cantidad": 2
+      },
+      {
+        "Nombre": "bbb",
+        "Cantidad": 5
+      }
+    ],
+    "Fecha": "2025-04-16T00:00:00"
+  }
+]

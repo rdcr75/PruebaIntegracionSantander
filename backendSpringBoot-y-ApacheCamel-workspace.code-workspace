@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "ApacheCamel/camel-integration"
+		},
+		{
+			"path": "BakendSpringBoot/ordenes"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}

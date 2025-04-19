@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "21237dfe-2205-433a-b8e9-9b6b27993dd2",
+		"name": "ProyectoIntegracion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9887139"
+	},
+	"item": [
+		{
+			"name": "API ASP.NET OrdenCompra",
+			"item": [
+				{
+					"name": "Orden de Compra - Agregar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Cliente\": \"Maria Peres\",\r\n  \"productos\": [\r\n    {\r\n      \"nombre\": \"Mouse\",\r\n      \"cantidad\": 5\r\n    },\r\n    {\r\n      \"nombre\": \"Teclado\",\r\n      \"cantidad\": 15\r\n    }\r\n  ],\r\n  \"fecha\": \"2025-04-17T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44376/ordenes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44376",
+							"path": [
+								"ordenes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordenes de Compra - Listar Todo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44376/ordenes",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44376",
+							"path": [
+								"ordenes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Microservicio en Spring Boot",
+			"item": [
+				{
+					"name": "procesar-orden",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Cliente\": \"Julio Verne\",\r\n    \"Fecha\": \"2025-04-17T00:00:00\",\r\n    \"Productos\": [\r\n        {\r\n            \"Nombre\": \"Laipz\",\r\n            \"Cantidad\": 1\r\n        },\r\n        {\r\n            \"Nombre\": \"Boligrafo\",\r\n            \"Cantidad\": 2\r\n        }\r\n    ],\r\n    \"TotalProductos\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8003/procesar-orden",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8003",
+							"path": [
+								"procesar-orden"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

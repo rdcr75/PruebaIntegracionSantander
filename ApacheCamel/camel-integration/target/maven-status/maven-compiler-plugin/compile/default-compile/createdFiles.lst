@@ -1,0 +1,4 @@
+com\ruben\camel\CamelApplication.class
+com\ruben\camel\model\Orden.class
+com\ruben\camel\model\Producto.class
+com\ruben\camel\routes\OrdenRoute.class

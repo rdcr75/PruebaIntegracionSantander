@@ -1,0 +1,62 @@
+<div style="margin: 20px;">
+  <button *ngIf="!mostrarFormulario" (click)="mostrarFormulario = true">Nueva Orden</button>
+
+  <div *ngIf="mostrarFormulario" style="margin-top: 20px;">
+    <h3>Nueva Orden de Compra</h3>
+    <form (ngSubmit)="crearOrden()">
+      <label>Cliente:</label>
+      <input type="text" [(ngModel)]="nuevaOrden.Cliente" name="Cliente" required />
+
+      <label>Fecha:</label>
+      <input type="date" [(ngModel)]="nuevaOrden.Fecha" name="fecha" required />
+
+      <h4>Productos</h4>
+      <div *ngFor="let producto of nuevaOrden.Productos">
+        {{ producto.Nombre }} - Cantidad: {{ producto.Cantidad }}
+      </div>
+
+      <label>Nombre Producto:</label>
+      <input type="text" [(ngModel)]="nuevoProducto.Nombre" name="nombreProducto" required />
+
+      <label>Cantidad:</label>
+      <input type="number" [(ngModel)]="nuevoProducto.Cantidad" name="cantidadProducto" required min="1" />
+
+      <button type="button" (click)="agregarProducto()">Agregar Producto</button>
+
+      <br /><br />
+      <button type="button" (click)="mostrarFormulario = false">Cancelar</button>
+      <button type="submit">Crear Orden</button>
+    </form>
+  </div>
+
+  <div *ngIf="ordenes.length > 0" style="margin-top: 30px;">
+    <h3>Órdenes de Compra</h3>
+    <!-- <ul>
+      <li *ngFor="let orden of ordenes">
+        {{ orden.Cliente }} - {{ orden.Fecha }}
+        <ul>
+          <li *ngFor="let p of orden.Productos">
+            {{ p.Nombre }} - Cantidad: {{ p.Cantidad }}
+          </li>
+        </ul>
+      </li>
+    </ul> -->
+    <ng-container *ngFor="let orden of ordenes">
+      <p>{{ orden.Cliente }} - {{ orden.Fecha }}</p>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of orden.Productos">
+            <td>{{ p.Nombre }}</td>
+            <td>{{ p.Cantidad }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ng-container>
+  </div>
+</div>
